@@ -1,0 +1,55 @@
+
+
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    background-color: rgb(78, 78, 107);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+    margin:0;
+}
+.container{
+    display: flex;
+    width:100vh;
+}
+.plane {
+    background-size: auto 100%;
+    background-size: cover;
+    background-position:center;
+    height: 50vh ;
+    border-radius: 40px;
+    color: white;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+.plane h3{
+font-size: 24px;
+position:absolute;
+bottom: 20px;
+left: 20px;
+margin: 0;
+opacity: 0;
+}
+.plane.active{
+    flex: 5;
+}
+.plane.active h3{
+    opacity: 1;
+}
+@media(max-width:478px){
+    .container{
+        width: 100vw;
+    }
+    .plane:nth-of-type(5),
+    .plane:nth-of-type(6) {
+        display: none;
+    }
+}
